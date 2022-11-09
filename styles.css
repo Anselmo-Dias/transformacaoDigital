@@ -1,0 +1,603 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --hue: 214;
+    --white: #FFF;
+    --white-100: #F4F4F4;
+
+    --light-blue: #4ca7c0;
+    --gray-100: #b5b5b5;
+    --gray-200: #8c8c8c;
+    --gray-300: #666666;
+    --gray-400: #515151;
+
+    font-size: 62.5%;
+    --font: 'Poppins', sans-serif;
+
+}
+
+/* ::-webkit-scrollbar           {  1  } 
+::-webkit-scrollbar-button       {  2  } 
+::-webkit-scrollbar-track        {  3  } 
+::-webkit-scrollbar-track-piece  {  4  } 
+::-webkit-scrollbar-thumb        {  5  } 
+::-webkit-scrollbar-corner       {  6  } 
+::-webkit-resizer                {  7  }  
+*/
+/* 
+::-webkit-scrollbar-track {
+    background-color: var(--white-100);
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background: var(--white);
+}
+::-webkit-scrollbar-thumb {
+    background: #000;
+} */
+
+#img-animation{
+    box-shadow: 1.2rem 2rem 2rem rgba(0, 0, 0, 0.532);
+    border-radius: 1rem;
+    animation: shine 1s infinite alternate;
+}
+
+@keyframes shine{
+    0% {
+      box-shadow: 0px 0px 2px white;
+    }
+
+    100% {
+        box-shadow: 0px 0px 25px white;
+    }
+  }
+
+.divider-1 {
+    margin-block: 4rem;
+    height: 0.1rem;
+    background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 36%, 57%, 1),
+    hsla(var(--hue), 65%, 88%, 0.34)
+  );
+}
+
+.wrapper {
+    display: flex;
+    max-width: min(120rem, 100%);
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+.color{
+    background-color: var(--light-blue);
+}
+
+.button-hover:hover {
+    opacity: 0.5;
+}
+
+.grid {
+    display: grid;
+}
+
+.col-a {
+    grid-area: A;
+}
+
+
+.col-b {
+    text-align: center;
+    color: #F4F4F4;
+    grid-area: B;
+}
+
+/* html,body {
+    smoo
+} */
+
+body {
+    margin: 0;
+    font-family: var(--font);
+    font-size: 1.6rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section{
+    padding: 4rem;
+}
+
+img {
+    width: 100%;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* ---nav--- */
+nav {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between; 
+
+   padding-top: 5.6rem;
+   margin-bottom: 6.4rem;
+
+   color: #FFFFFF;
+}
+
+nav div ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+nav ul li {
+    text-align: center;
+}
+
+nav ul li a {
+    transition: color 0.3s ;
+    position: relative;
+}
+
+
+nav ul li a:hover {
+    color: black;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 0.2rem;
+    background: black;
+
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+/* ---home--- */
+
+#home .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "A B";
+    grid-column-gap: 13.9rem;
+}
+
+
+#home .content h2 {
+    font-size: 4.8rem;
+    font-weight: 400;
+    color: #FFFFFF;   
+    margin-bottom: 1.6rem;
+}
+
+#home .content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    color: #F1F1F1;
+    margin-bottom: 5.6rem;
+}
+
+#home .content a {
+    border-radius: 5.6rem;
+    padding: 1.6rem 5.6rem 1.6rem 5.6rem;
+    background-color: #331436;
+    color: #FFFFFF;
+}
+
+#home .col-a {
+    text-align: left;
+    align-self: center;
+}
+
+#home img {
+    width: 40rem;
+}
+
+#home {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.529);
+}
+
+/* ---seasons--- */
+
+#seasons {
+    background-color: #fff;
+    /* margin-bottom: 8.4rem; */
+    box-shadow: inset 0px 50px 100px rgba(0, 0, 0, 0.2);
+}
+
+#seasons header {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: #FFFFFF;
+    color: #000;
+
+    margin-top: 8.4rem;
+}
+
+#header span {
+    font-weight: 400;
+    font-size: 3rem;
+    color: rgb(0, 0, 0);
+}
+
+#header h3 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+#seasons #header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+#seasons .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#seasons #header h3 {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 7.2rem;
+}
+
+
+#seasons #header span {
+    font-weight: 400;
+    font-size: 3rem;
+    color: #777777;
+}
+
+#seasons #cards {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+    margin-top: 4rem;
+    gap: 3rem;
+    padding-bottom: 4rem;
+}
+
+#seasons .card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.501);
+
+    border-radius: 1rem;
+
+    background-color: #e6e6e6;
+
+    padding: 2rem;
+}
+
+#seasons .card img {
+    width: 30rem;
+}
+
+
+#seasons .card > div  {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+#seasons .card > div p {
+    max-width: 40rem;
+    max-height: 20rem;
+    text-align: justify;
+    overflow-y: scroll;
+}
+
+
+/* ---impact--- */
+
+#impact {
+    padding-block: 10rem;
+    background-color: var(--light-blue);
+    color: var(--white-100);
+
+    box-shadow: inset 0px 50px 100px rgba(0, 0, 0, 0.42);
+    
+}
+
+#impact .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "A B";
+    grid-column-gap: 2rem;
+}
+
+#impact .content {
+    text-align: justify;
+}
+
+#impact .content strong {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.6rem;
+    line-height: 5.6rem;
+}
+
+#impact .content p {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+#impact .content ul li {
+    line-height: 1.7;
+}
+
+
+#impact > div img {
+    width: 49.4rem;
+    height: 49.4rem;
+    border-radius: 2rem;
+    object-fit: cover;
+} 
+
+/* --timeline-- */
+
+#timeline .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#timeline img {
+    width: 30rem;
+}
+
+/* ---authors--- */
+
+#authors {
+    background-color: var(--gray-400);
+    box-shadow: inset 0px 50px 100px rgba(0, 0, 0, 0.2);
+}
+
+#authors h1{
+    text-align: center;
+    margin: 1rem;
+    padding-block: 3rem;
+    color: #fff;
+}
+
+#authors .wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+#authors .author {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.455);
+
+    background-color: #666666;
+    padding: 2rem;
+    gap: 3rem;
+    color: #fff;
+    border-radius: 2rem;
+
+}
+
+#authors .author div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.author div p {
+    text-align: center;
+}
+
+.author div img {
+    border-radius: 2rem;
+    box-shadow: 0px 0px 5px black;
+}
+
+@media(max-width: 320px) {
+
+    #seasons {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #seasons .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    section#seasons #header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    section#seasons #header span {
+        font-weight: 400;
+        font-size: 2rem;
+        color: #777777;
+    }
+
+    section#seasons #header h3 {
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 7.2rem;
+    }
+
+}
+ 
+@media(max-width: 700px) {
+
+    body div.color nav.wrapper h1 {
+        margin-bottom : 1.5rem;
+    }
+
+    #home .wrapper,
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content h2,
+    .content p{
+        text-align: center;
+    }
+
+    #impact .wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+   
+    #authors .author {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .author p{
+        text-align: justify;
+    }
+
+}
+
+@media(max-width: 900px) {
+    /* ---home--- */
+    
+    #home .content h2 {
+        font-size: 2.8rem;
+        font-weight: 400;
+        color: #FFFFFF;   
+        margin-bottom: 1.6rem;
+    }
+
+    #home .content p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        color: #F1F1F1;
+        margin-bottom: 5.6rem;
+    }
+
+    #home img {
+        width: 100%;
+    }
+
+    /* ---seasons--- */
+
+    #seasons {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #seasons .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #seasons #header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    #seasons #header span {
+        font-weight: 400;
+        font-size: 3rem;
+        color: #777777;
+    }
+
+    #seasons #header h3 {
+        font-weight: 400;
+        font-size: 2.8rem;
+        line-height: 7.2rem;
+    }
+
+    /* ---impact-- */
+
+    #impact .wrapper {
+        flex-wrap: wrap;
+    }
+
+
+    #impact .content {
+        text-align: justify;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    #impact div .col-a img {
+        width: 100%;
+    }
+
+    /* ---authors-- */
+    #authors .wrapper{
+        flex-direction: column;
+    }
+}
